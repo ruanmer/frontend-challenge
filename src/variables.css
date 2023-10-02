@@ -1,0 +1,24 @@
+:root {
+  /* Color */
+  --color-text: #3a3b41;
+  --color-inverse: #fff;
+  --color-primary: #0e680e;
+
+  /* Background */
+  --background-primary: #0e680e;
+  --background-primary-darker: #0a4007;
+  --background-secondary: #cfd1d8;
+  --background-secondary-darker: #ccc;
+
+  /* Font */
+  --font-family: Arial, sans-serif;
+  --font-size-small: 12px;
+  --font-size-medium: 14px;
+  --font-size-large: 16px;
+
+  /* Border */
+  --border-radius: 8px;
+
+  /* Sizing */
+  --sizing-medium: 54px;
+}
