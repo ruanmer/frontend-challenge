@@ -1,0 +1,15 @@
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.Select {
+  box-sizing: border-box;
+  padding: 10px;
+  height: var(--sizing-medium);
+  border: 1px solid var(--border-color-secondary);
+  border-radius: var(--border-radius);
+  font-family: var(--font-family);
+  font-size: var(--font-size-large);
+  outline-offset: 4px;
+}
