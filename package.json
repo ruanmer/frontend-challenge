@@ -50,7 +50,8 @@
       "prettier --write"
     ],
     "*.{js,jsx}": [
-      "eslint --fix"
+      "eslint --fix",
+      "jest --bail --findRelatedTests --passWithNoTests"
     ]
   },
   "browserslist": {
