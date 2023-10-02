@@ -13,3 +13,4 @@ To ensure code quality and improve the workflow, I installed several tools, such
 - [Commitlint](https://github.com/conventional-changelog/commitlint) to lint commits and ensure Conventional Commits rules.
 - [Husky](https://github.com/typicode/husky) and [Lint-staged](https://github.com/okonet/lint-staged) to execute commands before a commit is made.
 - [Storybook](https://github.com/storybookjs/storybook) to make building UI components easier.
+- [React Testing Library](https://github.com/testing-library/react-testing-library) to easily test components and encourage good testing practices.
