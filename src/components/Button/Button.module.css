@@ -1,0 +1,30 @@
+.Button {
+  box-sizing: border-box;
+  padding: 10px 20px;
+  height: var(--sizing-medium);
+  border: 0;
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-large);
+  font-family: var(--font-family);
+  font-weight: bold;
+  cursor: pointer;
+  outline-offset: 4px;
+}
+
+.primary {
+  background: var(--background-primary);
+  color: var(--color-inverse);
+}
+
+.primary:hover {
+  background: var(--background-primary-darker);
+}
+
+.secondary {
+  background: var(--background-secondary);
+  color: var(--color-text);
+}
+
+.secondary:hover {
+  background: var(--background-secondary-darker);
+}
