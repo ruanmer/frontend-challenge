@@ -18,6 +18,8 @@
 
   /* Border */
   --border-radius: 8px;
+  --border-color-primary: #0e680e;
+  --border-color-secondary: #8e919c;
 
   /* Sizing */
   --sizing-medium: 54px;
