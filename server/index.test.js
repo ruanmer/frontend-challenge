@@ -1,10 +1,6 @@
 const request = require("supertest");
 const app = require(".");
 
-const error = (err) => {
-  if (err) throw err;
-};
-
 it("returns colors", async () => {
   const response = await request(app).get("/api/colors");
 
