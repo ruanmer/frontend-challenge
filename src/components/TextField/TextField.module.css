@@ -10,6 +10,7 @@
   border: 1px solid var(--border-color-secondary);
   border-radius: var(--border-radius);
   font-family: var(--font-family);
-  font-size: var(--font-size-large);
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-regular);
   outline-offset: 4px;
 }
