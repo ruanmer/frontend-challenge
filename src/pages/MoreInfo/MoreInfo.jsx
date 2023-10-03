@@ -34,7 +34,7 @@ const MoreInfoPage = () => {
     const formElement = event.target;
     const formData = new FormData(formElement);
 
-    if (!formData.get("favoriteColor") || !formData.has("termsAndConditions")) {
+    if (!formData.get("color") || !formData.has("terms")) {
       setErrorMessage("All fields are required!");
 
       return;
@@ -52,7 +52,7 @@ const MoreInfoPage = () => {
       <Text variant="title">Additional Info</Text>
       {errorMessage && <Text color="error">{errorMessage}</Text>}
       <form onSubmit={onSubmit} name="moreInfoForm" noValidate>
-        <SelectField name="favoriteColor">
+        <SelectField name="color">
           <option value="">Select your favorite color</option>
           {colors.map((color) => (
             <option value={color} key={color}>
@@ -61,7 +61,7 @@ const MoreInfoPage = () => {
           ))}
         </SelectField>
         <Checkbox
-          name="termsAndConditions"
+          name="terms"
           value="on"
           label="I agree to Terms and Conditions"
         />

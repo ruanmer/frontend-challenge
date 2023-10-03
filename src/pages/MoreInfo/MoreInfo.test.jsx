@@ -62,4 +62,20 @@ describe("SignUp", () => {
 
     expect(window.location.pathname).toBe("/confirmation");
   });
+
+  it("should navigate back to home when the back button is clicked", async () => {
+    render(
+      <BrowserRouter>
+        <StoreProvider>
+          <MoreInfoPage />
+        </StoreProvider>
+      </BrowserRouter>,
+    );
+
+    await waitFor(() =>
+      fireEvent.click(screen.getByRole("button", { name: "Back" })),
+    );
+
+    expect(window.location.pathname).toBe("/");
+  });
 });

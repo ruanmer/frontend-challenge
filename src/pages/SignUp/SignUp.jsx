@@ -19,7 +19,7 @@ const SignUpPage = () => {
     const formData = new FormData(formElement);
 
     if (
-      !formData.get("firstName") ||
+      !formData.get("name") ||
       !formData.get("email") ||
       !formData.get("password")
     ) {
@@ -48,9 +48,9 @@ const SignUpPage = () => {
       <form onSubmit={onSubmit} name="signUpForm" noValidate>
         <TextField
           placeholder="First Name"
-          name="firstName"
+          name="name"
           type="text"
-          defaultValue={data.firstName}
+          defaultValue={data.name}
         />
         <TextField
           placeholder="Email"
