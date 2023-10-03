@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./SelectField.module.css";
 
-export default function SelectField(props) {
+const SelectField = (props) => {
   const { name, value, children, ...restProps } = props;
 
   return (
@@ -17,10 +17,12 @@ export default function SelectField(props) {
       </select>
     </div>
   );
-}
+};
 
 SelectField.propTypes = {
   name: PropTypes.string,
   value: PropTypes.string,
   children: PropTypes.node,
 };
+
+export default SelectField;

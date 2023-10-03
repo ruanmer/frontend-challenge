@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import styles from "./TextField.module.css";
 
-export default function TextField(props) {
+const TextField = (props) => {
   const { placeholder, name, type = "text", value, ...restProps } = props;
 
   return (
@@ -17,7 +17,7 @@ export default function TextField(props) {
       />
     </div>
   );
-}
+};
 
 TextField.propTypes = {
   placeholder: PropTypes.string,
@@ -25,3 +25,5 @@ TextField.propTypes = {
   value: PropTypes.string,
   type: PropTypes.oneOf(["text", "email", "password"]),
 };
+
+export default TextField;
