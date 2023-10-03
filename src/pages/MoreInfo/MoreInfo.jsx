@@ -1,14 +1,30 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Panel from "../../components/Panel";
 import Text from "../../components/Text";
 import SelectField from "../../components/SelectField";
 import Checkbox from "../../components/Checkbox";
 import Button from "../../components/Button";
+import { fetchColors } from "../../services/colors";
 
 const MoreInfoPage = () => {
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+  const [colors, setColors] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
+
+  useEffect(() => {
+    const fetchData = async () => {
+      setLoading(true);
+
+      const colors = await fetchColors();
+
+      setColors(colors);
+      setLoading(false);
+    };
+
+    fetchData();
+  }, []);
 
   const onSubmit = (event) => {
     event.preventDefault();
@@ -26,12 +42,17 @@ const MoreInfoPage = () => {
   };
 
   return (
-    <Panel>
+    <Panel loading={loading}>
       <Text variant="title">Additional Info</Text>
       {errorMessage && <Text color="error">{errorMessage}</Text>}
       <form onSubmit={onSubmit} name="moreInfoForm" noValidate>
         <SelectField name="favoriteColor">
           <option value="">Select your favorite color</option>
+          {colors.map((color) => (
+            <option value={color} key={color}>
+              {color}
+            </option>
+          ))}
         </SelectField>
         <Checkbox
           name="termsAndConditions"
