@@ -11,6 +11,7 @@
 .Loader {
   width: 50px;
   height: 50px;
+  margin: auto;
   border: 10px solid var(--border-color-primary-light);
   border-top: 10px solid var(--border-color-primary);
   border-radius: 50%;
