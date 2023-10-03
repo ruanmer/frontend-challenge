@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router";
 import Panel from "../../components/Panel";
 import Text from "../../components/Text";
 import TextField from "../../components/TextField";
@@ -6,6 +7,7 @@ import Button from "../../components/Button";
 import { validateEmail } from "../../utils/validator";
 
 const SignUpPage = () => {
+  const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState("");
 
   const onSubmit = (event) => {
@@ -29,6 +31,8 @@ const SignUpPage = () => {
 
       return;
     }
+
+    navigate("/more-info");
   };
 
   return (
