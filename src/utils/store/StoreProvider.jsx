@@ -11,10 +11,15 @@ const StoreProvider = (props) => {
     setData((prevData) => ({ ...prevData, ...newData }));
   }, []);
 
+  const reset = useCallback(() => {
+    setData({});
+  }, []);
+
   const contextValue = useMemo(
     () => ({
       data,
       add,
+      reset,
     }),
     [data],
   );
