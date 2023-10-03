@@ -30,9 +30,7 @@ const ConfirmationPage = () => {
       <Text>Email: {data.email || "-"}</Text>
       <Text>Password: {data.password ? "****" : "-"}</Text>
       <Text>Favorite Color: {data.color || "-"}</Text>
-      <Text>
-        Terms and Conditions: {data.terms === "on" ? "Agreed" : "Not agreed"}
-      </Text>
+      <Text>Terms and Conditions: {data.terms ? "Agreed" : "Not agreed"}</Text>
       <Button color="secondary" onClick={() => navigate("/more-info")}>
         Back
       </Button>

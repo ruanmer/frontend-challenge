@@ -42,7 +42,10 @@ const MoreInfoPage = () => {
 
     const data = Object.fromEntries(formData);
 
-    add(data);
+    add({
+      ...data,
+      terms: data.terms === "on",
+    });
 
     navigate("/confirmation");
   };
