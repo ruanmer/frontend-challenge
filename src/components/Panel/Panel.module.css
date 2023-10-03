@@ -1,0 +1,11 @@
+.Wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Panel {
+  width: 400px;
+  max-width: 100%;
+  padding: 20px;
+}
