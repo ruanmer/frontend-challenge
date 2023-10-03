@@ -1,6 +1,7 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import { render, screen, fireEvent, waitFor } from "@testing-library/react";
+import { StoreProvider } from "../../utils/store";
 import MoreInfoPage from "./index";
 
 jest.mock("../../services/colors", () => ({
@@ -9,7 +10,13 @@ jest.mock("../../services/colors", () => ({
 
 describe("SignUp", () => {
   it("should require all fields to be filled", async () => {
-    render(<MoreInfoPage />, { wrapper: BrowserRouter });
+    render(
+      <BrowserRouter>
+        <StoreProvider>
+          <MoreInfoPage />
+        </StoreProvider>
+      </BrowserRouter>,
+    );
 
     await waitFor(() => fireEvent.submit(screen.getByRole("form")));
 
@@ -17,7 +24,13 @@ describe("SignUp", () => {
   });
 
   it("should fetch and render colors", async () => {
-    render(<MoreInfoPage />, { wrapper: BrowserRouter });
+    render(
+      <BrowserRouter>
+        <StoreProvider>
+          <MoreInfoPage />
+        </StoreProvider>
+      </BrowserRouter>,
+    );
 
     await waitFor(() =>
       expect(screen.getByRole("option", { name: "blue" })).toBeInTheDocument(),
@@ -27,7 +40,13 @@ describe("SignUp", () => {
   });
 
   it("should navigate to more info page if all fields are valid", async () => {
-    render(<MoreInfoPage />, { wrapper: BrowserRouter });
+    render(
+      <BrowserRouter>
+        <StoreProvider>
+          <MoreInfoPage />
+        </StoreProvider>
+      </BrowserRouter>,
+    );
 
     await waitFor(() =>
       expect(screen.getByRole("option", { name: "blue" })).toBeInTheDocument(),

@@ -1,11 +1,18 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 import { render, screen, fireEvent } from "@testing-library/react";
+import { StoreProvider } from "../../utils/store";
 import SignUpPage from "./index";
 
 describe("SignUp", () => {
   it("should require all fields to be filled", () => {
-    render(<SignUpPage />, { wrapper: BrowserRouter });
+    render(
+      <BrowserRouter>
+        <StoreProvider>
+          <SignUpPage />
+        </StoreProvider>
+      </BrowserRouter>,
+    );
 
     fireEvent.submit(screen.getByRole("form"));
 
@@ -13,7 +20,13 @@ describe("SignUp", () => {
   });
 
   it("should require a valid email", () => {
-    render(<SignUpPage />, { wrapper: BrowserRouter });
+    render(
+      <BrowserRouter>
+        <StoreProvider>
+          <SignUpPage />
+        </StoreProvider>
+      </BrowserRouter>,
+    );
 
     fireEvent.change(screen.getByPlaceholderText("First Name"), {
       target: { value: "My First Name" },
@@ -31,7 +44,13 @@ describe("SignUp", () => {
   });
 
   it("should navigate to more info page if all fields are valid", () => {
-    render(<SignUpPage />, { wrapper: BrowserRouter });
+    render(
+      <BrowserRouter>
+        <StoreProvider>
+          <SignUpPage />
+        </StoreProvider>
+      </BrowserRouter>,
+    );
 
     fireEvent.change(screen.getByPlaceholderText("First Name"), {
       target: { value: "My First Name" },

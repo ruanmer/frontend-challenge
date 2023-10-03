@@ -6,9 +6,11 @@ import SelectField from "../../components/SelectField";
 import Checkbox from "../../components/Checkbox";
 import Button from "../../components/Button";
 import { fetchColors } from "../../services/colors";
+import { useStore } from "../../utils/store";
 
 const MoreInfoPage = () => {
   const navigate = useNavigate();
+  const { add } = useStore();
   const [loading, setLoading] = useState(false);
   const [colors, setColors] = useState([]);
   const [errorMessage, setErrorMessage] = useState("");
@@ -38,6 +40,10 @@ const MoreInfoPage = () => {
       return;
     }
 
+    const data = Object.fromEntries(formData);
+
+    add(data);
+
     navigate("/confirmation");
   };
 
@@ -56,6 +62,7 @@ const MoreInfoPage = () => {
         </SelectField>
         <Checkbox
           name="termsAndConditions"
+          value="on"
           label="I agree to Terms and Conditions"
         />
         <Button onClick={() => navigate("/")} color="secondary">
