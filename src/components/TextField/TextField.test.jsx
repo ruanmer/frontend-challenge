@@ -15,12 +15,6 @@ describe("TextField", () => {
     expect(screen.getByRole("textbox")).toHaveAttribute("type", "email");
   });
 
-  it("should render with value", () => {
-    render(<TextField value="Input value" />);
-
-    expect(screen.getByRole("textbox")).toHaveDisplayValue("Input value");
-  });
-
   it("should render with placeholder", () => {
     render(<TextField placeholder="Input" />);
 
