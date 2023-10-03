@@ -1,1 +1,1 @@
-import "../src/variables.css";
+import "../src/styles/variables.css";
