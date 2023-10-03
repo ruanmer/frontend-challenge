@@ -1,5 +1,14 @@
-export const fetchColors = async () => {
-  const response = await fetch("http://localhost:3001/api/colors");
+let COLORS_IN_MEMORY_CACHE;
 
-  return response.json();
+export const fetchColors = async () => {
+  if (COLORS_IN_MEMORY_CACHE) {
+    return COLORS_IN_MEMORY_CACHE;
+  }
+
+  const response = await fetch("http://localhost:3001/api/colors");
+  const data = await response.json();
+
+  COLORS_IN_MEMORY_CACHE = data;
+
+  return data;
 };
