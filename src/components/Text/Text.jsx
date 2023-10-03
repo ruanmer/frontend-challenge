@@ -4,14 +4,16 @@ import classNames from "classnames";
 import styles from "./Text.module.css";
 
 const Text = (props) => {
-  const { variant = "body", children } = props;
+  const { variant = "body", color = "text", children } = props;
   const Component = {
     body: "p",
     title: "h1",
   }[variant];
 
   return (
-    <Component className={classNames(styles.Text, styles[variant])}>
+    <Component
+      className={classNames(styles.Text, styles[variant], styles[color])}
+    >
       {children}
     </Component>
   );
@@ -20,6 +22,7 @@ const Text = (props) => {
 Text.propTypes = {
   children: PropTypes.node.isRequired,
   variant: PropTypes.oneOf(["body", "title"]),
+  color: PropTypes.oneOf(["text", "error"]),
 };
 
 export default Text;

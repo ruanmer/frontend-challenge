@@ -13,3 +13,11 @@
   font-size: var(--font-size-large);
   font-weight: var(--font-weight-bold);
 }
+
+.text {
+  color: var(--color-text);
+}
+
+.error {
+  color: var(--color-error);
+}

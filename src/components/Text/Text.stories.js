@@ -19,3 +19,10 @@ export const Title = {
     children: "Title",
   },
 };
+
+export const Error = {
+  args: {
+    color: "error",
+    children: "Error!",
+  },
+};
