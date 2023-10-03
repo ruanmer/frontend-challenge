@@ -1,0 +1,13 @@
+.Text {
+  font-family: var(--font-family);
+}
+
+.body {
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-regular);
+  }
+
+.title {
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-bold);
+}
