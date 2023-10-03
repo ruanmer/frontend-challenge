@@ -3,11 +3,13 @@
 }
 
 .body {
+  margin: 0 0 20px;
   font-size: var(--font-size-medium);
   font-weight: var(--font-weight-regular);
   }
 
 .title {
+  margin: 0 0 20px;
   font-size: var(--font-size-large);
   font-weight: var(--font-weight-bold);
 }

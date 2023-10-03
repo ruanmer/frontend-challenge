@@ -1,7 +1,8 @@
 .Wrapper {
   display: flex;
   flex-direction: column;
-}
+  margin-bottom: 20px;
+  }
 
 .Select {
   box-sizing: border-box;

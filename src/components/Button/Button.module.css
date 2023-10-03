@@ -11,6 +11,10 @@
   outline-offset: 4px;
 }
 
+.Button + .Button {
+  margin-left: 10px;
+}
+
 .primary {
   background: var(--background-primary);
   color: var(--color-inverse);
