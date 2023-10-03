@@ -6,9 +6,9 @@
 
   /* Background */
   --background-primary: #0e680e;
-  --background-primary-darker: #0a4007;
+  --background-primary-dark: #0a4007;
   --background-secondary: #cfd1d8;
-  --background-secondary-darker: #ccc;
+  --background-secondary-dark: #ccc;
 
   /* Font */
   --font-family: Arial, sans-serif;
@@ -19,6 +19,7 @@
 
   /* Border */
   --border-radius: 8px;
+  --border-color-primary-light: #e8f5e6;
   --border-color-primary: #0e680e;
   --border-color-secondary: #8e919c;
 

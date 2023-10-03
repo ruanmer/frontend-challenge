@@ -17,7 +17,7 @@
 }
 
 .primary:hover {
-  background: var(--background-primary-darker);
+  background: var(--background-primary-dark);
 }
 
 .secondary {
@@ -26,5 +26,5 @@
 }
 
 .secondary:hover {
-  background: var(--background-secondary-darker);
+  background: var(--background-secondary-dark);
 }
