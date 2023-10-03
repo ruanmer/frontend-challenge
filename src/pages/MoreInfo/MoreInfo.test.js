@@ -5,11 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 
 describe("SignUp", () => {
   it("should require all fields to be filled", () => {
-    render(
-      <BrowserRouter>
-        <MoreInfoPage />
-      </BrowserRouter>,
-    );
+    render(<MoreInfoPage />, { wrapper: BrowserRouter });
 
     fireEvent.submit(screen.getByRole("form"));
 

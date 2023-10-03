@@ -21,6 +21,8 @@ const MoreInfoPage = () => {
 
       return;
     }
+
+    navigate("/confirmation");
   };
 
   return (
